@@ -42,5 +42,90 @@ public class Team {
 	    public void setGoalkeeper(String goalkeeper) {
 	        GoalKeeper = goalkeeper;
 	    }
+
+
+	    public void save(){
+                String ls = System.getProperty("line.seperator");
+
+                FileWriter fw;
+                try{
+                    fw = new FileWriter(new File ("FCknudde.txt"));
+                } catch (IOException e) {
+                    System.out.println("Saving failed: IOException");
+                    e.printStackTrace();
+                    return;
+                }
+
+                PrintWriter w = new PrintWriter(new BufferedWriter(fw));
+                w.printf("%d %d%s", team.size(), matches.size(),ls);
+                w.printf("%s%s %s%s %s%s", Coach, ls, Captain, ls, GoalKeeper);
+
+                for(Player player:team){
+                        w.printf("%d%s %s%s %s%s %s%s",
+                        player.getName(),
+                        ,ls
+                        player.getFirstName(),
+                        ,ls
+                        player.getAddress(),
+                        ls,
+                        player.getTelNumber(),
+                        ls,
+                        player.getBackNumber(),
+                        ls,
+                        player.getPosition(),
+                        ls,
+                        player.getInjury(),
+                        ls,
+                        player.getCards,
+                        ,ls
+                        );
+            }
+
+            for(Match match:matches){
+                w.printf("%d %d %s%s", match.getHome(), match.getOut(), match.getOpponent());
+            }
+                w.close();
+            }
+	    
+	    
+	    public void load(File filename){
+            FileReader fr;
+            int numPlayers;
+            int numMatches;
+            try{
+                fr = new FileReader(fileName);
+            } catch(FileNotFoundException e){
+                System.out.println("Loading failed: File not found");
+                e.printStackTrace();
+                return;
+            }
+                Scanner s = new Scanner(fr);
+                numPlayers = s.nextInt();
+                numMatches = s.nextInt();
+
+                this.setCoach(s.nextLine());
+                this.setGoalKeeper(s.nextLine());
+                this.setCaptain(s.nextLine());
+
+                for(int i = 0; i<numPlayers; i++){
+                    this.addPlayer(new Player(
+                            s.nextLine();, /*reads the name*/
+                            s.nextLine(), /*reads the firstname*/
+                            s.nextLine(), /*reads the address*/
+                            s.nextLine(), /*reads the telephone number*/
+                            s.nextLine(), /*reads the backnumber*/
+                            s.nextLine(), /*reads the position*/
+                            s.nextInt(), /*injuries*/
+                            s.nextInt(), /*cards*/
+                        )
+                    );
+                }
+
+                for(int i = 0; i<numMatches;i++){
+                    this.addMatch(s.nextInt(),s.nextInt(), s.nextLine());
+                }
+                setChanged();
+                notifyObservers();
+            }
 	  
 }
