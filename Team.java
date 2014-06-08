@@ -10,6 +10,21 @@ public class Team {
       private String GoalKeeper;
 	
 	  ArrayList<Player> team = new ArrayList<Player>();
+	  ArrayList<Match> matches = new ArrayList<Match>();
+	  
+	  public Team(String coach, String captain, String goalkeeper){
+		  this.Coach = coach;
+		  this.Captain = captain;
+		  this.GoalKeeper = goalkeeper;
+	  }
+	  
+	  public void addMatch(Match m){
+          matches.add(m);
+      }
+   
+	  public void removeMatch(int index){
+          matches.remove(index);
+      }
 	  
 	  public void addPlayer(Player p){
           team.add(p);
@@ -63,9 +78,9 @@ public class Team {
                 for(Player player:team){
                         w.printf("%d%s %s%s %s%s %s%s",
                         player.getName(),
-                        ,ls
+                        ls,
                         player.getFirstName(),
-                        ,ls
+                        ls,
                         player.getAddress(),
                         ls,
                         player.getTelNumber(),
@@ -76,13 +91,13 @@ public class Team {
                         ls,
                         player.getInjury(),
                         ls,
-                        player.getCards,
-                        ,ls
+                        player.getCards(),
+                        ls
                         );
             }
 
             for(Match match:matches){
-                w.printf("%d %d %s%s", match.getHome(), match.getOut(), match.getOpponent());
+                w.printf("%d %d %s%s", match.getHome(), match.getAway(), match.getOpponent());
             }
                 w.close();
             }
@@ -93,7 +108,7 @@ public class Team {
             int numPlayers;
             int numMatches;
             try{
-                fr = new FileReader(fileName);
+                fr = new FileReader(filename);
             } catch(FileNotFoundException e){
                 System.out.println("Loading failed: File not found");
                 e.printStackTrace();
@@ -104,28 +119,26 @@ public class Team {
                 numMatches = s.nextInt();
 
                 this.setCoach(s.nextLine());
-                this.setGoalKeeper(s.nextLine());
+                this.setGoalkeeper(s.nextLine());
                 this.setCaptain(s.nextLine());
 
                 for(int i = 0; i<numPlayers; i++){
                     this.addPlayer(new Player(
-                            s.nextLine();, /*reads the name*/
+                            s.nextLine(), /*reads the name*/
                             s.nextLine(), /*reads the firstname*/
                             s.nextLine(), /*reads the address*/
                             s.nextLine(), /*reads the telephone number*/
                             s.nextLine(), /*reads the backnumber*/
                             s.nextLine(), /*reads the position*/
                             s.nextInt(), /*injuries*/
-                            s.nextInt(), /*cards*/
+                            s.nextInt() /*cards*/
                         )
                     );
                 }
 
                 for(int i = 0; i<numMatches;i++){
-                    this.addMatch(s.nextInt(),s.nextInt(), s.nextLine());
+                    this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine()));
                 }
-                setChanged();
-                notifyObservers();
             }
 	  
 }

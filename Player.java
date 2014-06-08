@@ -3,17 +3,17 @@ package Team;
 public class Player extends Person {
 	
     private String backNumber;
-    private String position;
-    private int injury;
-    private int cards; /*where a yellow card is 1/2 and red 1*/
+    private String Position;
+    private int Injury;
+    private int Cards; /*where a yellow card is 1/2 and red 1*/
     
     public Player(String name, String firstName, String address, 
                 String telNumber, String backNumber, String position, int injury, int cards) {
         super(name, firstName, address, telNumber);
         this.backNumber = backNumber;
-        this.position = position;
-        this.injury = injury;
-        this.cards = cards;
+        this.Position = position;
+        this.Injury = injury;
+        this.Cards = cards;
     }
   
     public String getBackNumber() {
@@ -25,26 +25,26 @@ public class Player extends Person {
     }
     
     public String getPosition() {
-        return position;
+        return Position;
     }
   
     public void setPosition(String position) {
-        position = position;
+    	Position = position;
     }
     
     public int getInjury() {
-        return injury;
+        return Injury;
     }
   
     public void setInury(int injury) {
-        injury = injury;
+        Injury = injury;
     }
     
-    public int cards() {
-        return cards;
+    public int getCards() {
+        return Cards;
     }
   
     public void setCards(int cards) {
-        cards = cards;
+        Cards = cards;
     }
 }

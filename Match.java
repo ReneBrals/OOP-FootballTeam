@@ -1,13 +1,18 @@
-import java.io.*;
-import java.util.*;
+package Team;
 
 public class Match {
 	
-      private Int Home;
-      private Int Away;
+      private int Home;
+      private int Away;
       private String Opponent;
 	  
-	    public int getHome() {
+	    public Match(int home, int away, String opponent) {
+		this.Home = home;
+		this.Away = away;
+		this.Opponent = opponent;
+	}
+
+		public int getHome() {
 	        return Home;
 	    }
 	  
