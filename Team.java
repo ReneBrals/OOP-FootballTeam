@@ -76,7 +76,7 @@ public class Team {
                 w.printf("%s%s %s%s %s%s", Coach, ls, Captain, ls, GoalKeeper);
 
                 for(Player player:team){
-                        w.printf("%d%s %s%s %s%s %s%s",
+                        w.printf("%s%s %s%s %s%s %s%s %d%s %s%s %d%s %d%s",
                         player.getName(),
                         ls,
                         player.getFirstName(),
@@ -103,12 +103,12 @@ public class Team {
             }
 	    
 	    
-	    public void load(File filename){
+	    public void load(File fileName){
             FileReader fr;
             int numPlayers;
             int numMatches;
             try{
-                fr = new FileReader(filename);
+                fr = new FileReader(fileName);
             } catch(FileNotFoundException e){
                 System.out.println("Loading failed: File not found");
                 e.printStackTrace();
