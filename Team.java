@@ -140,12 +140,12 @@ public class Team {
                 	ArrayList<Player> p = new ArrayList<Player>();
                 	for(int e = 0; e<14; e++){
                 		for(int u = 0; u<numPlayers; u++){
-                			if(this.team.index(u).equals(s.nextLine())){
-                				p.add(this.team.index(u));
+                			if(this.team.get(u).equals(s.nextLine())){
+                				p.add(this.team.get(u));
                 			}
                 		}
-                    }
-                    this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p));
+                	 }
+                    	this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p));
                     
                 }
             }
