@@ -43,7 +43,7 @@ Rotterdam
 0698772354
 4
 D
-00
+0 0
 Janmaat
 Daryl
 Rotterdam
