@@ -1,28 +1,207 @@
-3 3
-Oldenziel
-Sar
-Brals
-Koeman
-Ronald
-straat23
+23 3
+van Gaal
+van Persie
+Cillessen
+Cillessen
+Jasper
+Amsterdam
 0612345678
+1
+G
+0 0
+Vorm
+Michel
+Amsterdam
+0612345678	
+22	
+G
+0 0
+Krul
+Tim
+Newcastle
+0687654321
+23
+G
+0 0
+Vlaar
+Ron
+Eindhoven
+0634564567
+2
+D
+0 0
+de Vrij
+Stefan
+Rotterdam
+0612344577
+3
+D
+0 0
+Martins Indi
+Bruno
+Rotterdam
+0698772354
+4
+D
+00
+Janmaat
+Daryl
+Rotterdam
+0687652345
+7
+D
+0 0
+Blind
+Daley
+Amsterdam
+0623454567
 5
+D
+0 0
+Verhaegh
+Paul
+Ausburg
+0674542345
+12
+D
+0 0
+Veltman
+Joël
+Amsterdam
+069678634
+13
+D
+0 0
+Kongolo
+Terence
+Rotterdam
+0689072345
+14
+D
+0 0
+de Jong
+Nigel
+Milaan
+0665347890
+6
 M
 0 0
-Brals
-Rene
-Friesland
-0687654321
-9
-A
-0 1
-Robben
-Arjen
-Bedum
-05012345
+de Guzmán
+Jonathan
+Swansea
+0665347989
+8
+M
+0 0
+Sneijder
+Wesley
+Instanbul
+0634567980
 10
 M
-2 0
-1 0 FClineus
-2 4 FCbernoulli
-2 1 FCzernike
+0 0
+Clasie
+Jordy
+Rotterdam
+0623459807
+16
+M
+0 0
+Fer
+Leroy
+Norwich
+0632457986
+18
+M
+0 0
+Wijnaldum
+Georginio
+Eindhoven
+0685671445
+20
+M
+0 0
+van Persie
+Robin
+Manchester
+0647656987
+9
+A
+0 0
+Robben
+Arjen 
+Bedum
+066433456
+11
+A
+0 0
+Kuijt
+Dirk
+Instanbul
+0675452345
+15
+A
+0 0
+Lens
+Jeremain
+Kiev
+0623453456
+17
+A
+0 0
+Huntelaar
+Klaas-Jan
+Gelsenkirchen
+0674548675
+19
+A
+0 0
+Depay
+Memphis
+Eindhoven
+0658647566 
+21
+A
+0 0
+0 0 Spanje
+Cillessen
+Fer
+Martins Indi
+Vlaar
+Blind
+Sneijder
+de Jong
+Robben
+Huntelaar
+van Persie
+de Vrij
+Clasie
+Lens
+2 0 Australie
+Cillessen
+Fer
+Martins Indi
+Vlaar
+Blind
+Sneijder
+de Jong
+Robben
+Huntelaar
+van Persie
+de Vrij
+Clasie
+Lens
+2 0 Chili
+Cillessen
+Fer
+Martins Indi
+Vlaar
+Blind
+Sneijder
+de Jong
+Robben
+Huntelaar
+van Persie
+de Vrij
+Clasie
+Lens
