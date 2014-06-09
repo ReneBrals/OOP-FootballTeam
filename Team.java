@@ -146,8 +146,8 @@ public class Team {
                 				p.add(this.team.get(u));
                 			}
                 		}
-                    }
-                    this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p));
+                	 }
+                    	this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p));
                     
                 }
             }
