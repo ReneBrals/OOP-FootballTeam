@@ -20,6 +20,14 @@ public class Match {
 	    	playedPlayers.add(p);
 	    }
 	    
+	    public void removePlayedPlayer(int index){
+	    	playedPlayers.remove(index);
+	    }
+	    
+	    public Person getPlayedPlayer(int index){
+	    	return playedPlayers.get(index);
+	    }
+	    
 		public int getHome() {
 	        return Home;
 	    }

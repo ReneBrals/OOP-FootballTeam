@@ -98,6 +98,8 @@ public class Team {
 
             for(Match match:matches){
                 w.printf("%d %d %s%s", match.getHome(), match.getAway(), match.getOpponent());
+                for(int o=0; o<14; o++)
+                	w.printf("%s%s", match.getPlayedPlayer(o).getName(),ls);
             }
                 w.close();
             }
@@ -140,8 +142,8 @@ public class Team {
                 	ArrayList<Player> p = new ArrayList<Player>();
                 	for(int e = 0; e<14; e++){
                 		for(int u = 0; u<numPlayers; u++){
-                			if(this.team.index(u).equals(s.nextLine())){
-                				p.add(this.team.index(u));
+                			if(this.team.get(u).equals(s.nextLine())){
+                				p.add(this.team.get(u));
                 			}
                 		}
                     }
