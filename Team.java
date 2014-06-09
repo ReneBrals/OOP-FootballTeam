@@ -9,7 +9,7 @@ public class Team {
       private String Captain;
       private String GoalKeeper;
 	
-	  ArrayList<Player> team = new ArrayList<Player>();
+	  ArrayList<Player> players = new ArrayList<Player>();
 	  ArrayList<Match> matches = new ArrayList<Match>();
 	  
 	  public Team(String coach, String captain, String goalkeeper){
@@ -23,16 +23,16 @@ public class Team {
       }
    
 	  public void removeMatch(int index){
-          matches.remove(index);
-      }
+            matches.remove(index);
+            }
 	  
 	  public void addPlayer(Player p){
-          team.add(p);
+          players.add(p);
       }
    
 	  public void removePlayer(int index){
-          team.remove(index);
-      }
+          players.remove(index);
+        }
 	  
 	    public String getCoach() {
 	        return Coach;
@@ -72,10 +72,10 @@ public class Team {
                 }
 
                 PrintWriter w = new PrintWriter(new BufferedWriter(fw));
-                w.printf("%d %d%s", team.size(), matches.size(),ls);
+                w.printf("%d %d%s", players.size(), matches.size(),ls);
                 w.printf("%s%s %s%s %s%s", Coach, ls, Captain, ls, GoalKeeper);
 
-                for(Player player:team){
+                for(Player player:players){
                         w.printf("%s%s %s%s %s%s %s%s %d%s %s%s %d%s %d%s",
                         player.getName(),
                         ls,
@@ -117,12 +117,12 @@ public class Team {
                 Scanner s = new Scanner(fr);
                 numPlayers = s.nextInt();
                 numMatches = s.nextInt();
-
+                s.nextLine();
                 this.setCoach(s.nextLine());
                 this.setGoalkeeper(s.nextLine());
                 this.setCaptain(s.nextLine());
 
-                for(int i = 0; i<numPlayers; i++){
+                for(int i = 0; i<numPlayers; i++){                
                     this.addPlayer(new Player(
                             s.nextLine(), /*reads the name*/
                             s.nextLine(), /*reads the firstname*/
@@ -134,6 +134,7 @@ public class Team {
                             s.nextInt() /*cards*/
                         )
                     );
+                    s.nextLine();
                 }
 
                 for(int i = 0; i<numMatches;i++){
