@@ -85,7 +85,7 @@ public class Team {
                 w.printf("%s%s %s%s %s%s", Coach, ls, Captain, ls, GoalKeeper);
 
                 for(Player player:team){
-                        w.printf("%s%s %s%s %s%s %s%s %d%s %s%s %d%s %d%s",
+                        w.printf("%s%s %s%s %s%s %s%s %s%s %s%s %d%s %d%s",
                         player.getName(),
                         ls,
                         player.getFirstName(),
@@ -107,8 +107,20 @@ public class Team {
 
             for(Match match:matches){
                 w.printf("%d %d %s%s", match.getHome(), match.getAway(), match.getOpponent());
-                for(int o=0; o<14; o++)
+                for(int o=0; o<(match.getPlayedPlayerSize()); o++)
                 	w.printf("%s%s", match.getPlayedPlayer(o).getName(),ls);
+                
+                for(int o=0; o<(match.getPlayedPlayerSize()); o++)
+                	w.printf("%s%s", match.getScoredPlayer(o),ls);
+                
+                for(int o=0; o<(match.getScoredPlayerSize()); o++)
+                	w.printf("%s%s", match.getSubstitutedPlayer(o),ls);
+                
+                for(int o=0; o<(match.getPlayedPlayerSize()); o++)
+                	w.printf("%s%s", match.getYellowCardPlayer(o),ls);
+                
+                for(int o=0; o<(match.getPlayedPlayerSize()); o++)
+                	w.printf("%s%s", match.getRedCardPlayer(o),ls);
             }
                 w.close();
             }
@@ -149,16 +161,49 @@ public class Team {
                 }
                 String readPlayer;
                 for(int i = 0; i<numMatches;i++){
+                	/*initialised array for played players, scored players, substituted players, yellow carded players
+                	 * and red carded players in every match*/
+                	
                 	ArrayList<Player> p = new ArrayList<Player>();
-                	for(int e = 0; e<14; e++){
+                	ArrayList<String> sc = new ArrayList<String>();
+                	ArrayList<String> sub = new ArrayList<String>();
+                	ArrayList<String> y = new ArrayList<String>();
+                	ArrayList<String> r = new ArrayList<String>();
+                	
+                	
+                	int np = s.nextInt();
+                	int nsc = s.nextInt();
+                	int nsub = s.nextInt();
+                	int ny = s.nextInt();
+                	int nr = s.nextInt();
+                        
+                        s.nextLine(); //FLUSH THE FUCKING NEWLINE BEFORE READING A STRING
+                        
+                	 
+                	for(int e = 0; e<np; e++){
                             readPlayer = s.nextLine();
-                		for(int u = 0; u<numPlayers; u++){
-                			if(this.team.get(u).getName().equals(readPlayer)){
-                				p.add(this.team.get(u));
-                			}
+                            for(int u = 0; u<numPlayers; u++){
+                		if(this.team.get(u).getName().equals(readPlayer)){
+                                    p.add(this.team.get(u));
                 		}
-                	 }
-                    	this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p));
+                            }
+                	}
+                	
+                	for(int e=0; e<nsc; e++){
+                		sc.add(s.nextLine());
+                	}
+                	for(int e=0; e<nsub; e++){
+                		sub.add(s.nextLine());
+                	}
+                	for(int e=0; e<ny; e++){
+                		y.add(s.nextLine());
+                	}
+                	for(int e=0; e<nr; e++){
+                		r.add(s.nextLine());
+                	}
+                	
+                        System.out.println("huh");
+                    	this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p,sc,sub,y,r));
                 }
             }
 	  

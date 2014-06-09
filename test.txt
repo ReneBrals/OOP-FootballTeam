@@ -163,13 +163,32 @@ Eindhoven
 21
 A
 0 0
+14 0 2 0 0
+Cillessen
+Fer
+Martins Indi
+Vlaar
+Blind
+Sneijder
+Wijnaldum
+de Jong
+Robben
+Huntelaar
+van Persie
+de Vrij
+Clasie
+Lens
+Lens
+Clasie
 0 0 Spanje
+14 2 1 1 0 
 Cillessen
 Fer
 Martins Indi
 Vlaar
 Blind
 Sneijder
+Wijnaldum
 de Jong
 Robben
 Huntelaar
@@ -177,13 +196,19 @@ van Persie
 de Vrij
 Clasie
 Lens
+Huntelaar
+van Persie
+Clasie
+Robben
 2 0 Australie
+14 2 2 1 1
 Cillessen
 Fer
 Martins Indi
 Vlaar
 Blind
 Sneijder
+Wijnaldum
 de Jong
 Robben
 Huntelaar
@@ -191,17 +216,10 @@ van Persie
 de Vrij
 Clasie
 Lens
-2 0 Chili
-Cillessen
-Fer
-Martins Indi
-Vlaar
-Blind
 Sneijder
-de Jong
-Robben
-Huntelaar
-van Persie
+Blind
 de Vrij
-Clasie
 Lens
+de Jong
+Huntelaar
+2 1 Chili
