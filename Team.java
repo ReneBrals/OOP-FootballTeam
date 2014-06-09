@@ -17,6 +17,15 @@ public class Team {
 		  this.Captain = captain;
 		  this.GoalKeeper = goalkeeper;
 	  }
+          
+          public Team(Team team){
+              this.Coach = team.getCoach();
+              this.Captain = team.getCaptain();
+              this.GoalKeeper = team.GoalKeeper();
+              
+              this.team = new ArrayList<Player>(team.team);
+              this.matches = new ArrayList<Match>(team.matches);
+          }
 	  
 	  public void addMatch(Match m){
           matches.add(m);
@@ -119,7 +128,7 @@ public class Team {
                 Scanner s = new Scanner(fr);
                 numPlayers = s.nextInt();
                 numMatches = s.nextInt();
-
+                s.nextLine();
                 this.setCoach(s.nextLine());
                 this.setGoalkeeper(s.nextLine());
                 this.setCaptain(s.nextLine());
@@ -136,19 +145,20 @@ public class Team {
                             s.nextInt() /*cards*/
                         )
                     );
+                    s.nextLine();
                 }
-
+                String readPlayer;
                 for(int i = 0; i<numMatches;i++){
                 	ArrayList<Player> p = new ArrayList<Player>();
                 	for(int e = 0; e<14; e++){
+                            readPlayer = s.nextLine();
                 		for(int u = 0; u<numPlayers; u++){
-                			if(this.team.get(u).equals(s.nextLine())){
+                			if(this.team.get(u).getName().equals(readPlayer)){
                 				p.add(this.team.get(u));
                 			}
                 		}
                 	 }
                     	this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p));
-                    
                 }
             }
 	  
