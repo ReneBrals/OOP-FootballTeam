@@ -137,7 +137,12 @@ public class Team {
                 }
 
                 for(int i = 0; i<numMatches;i++){
-                    this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine()));
+                	ArrayList<Player> p = new ArrayList<Player>();
+                	for(int e = 0; e<14; e++){
+                		p.add(/*hoe voegen we hier een speler toe?*/);
+                    }
+                    this.addMatch(new Match(s.nextInt(),s.nextInt(), s.nextLine(),p));
+                    
                 }
             }
 	  
